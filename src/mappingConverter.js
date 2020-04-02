@@ -113,7 +113,10 @@ export function convertToSourceTC<TContext>(
             if (Array.isArray(source[sourceName])) {
               return source[sourceName];
             }
-            return [source[sourceName]];
+            if (source[sourceName]) {
+              return [source[sourceName]];  
+            }
+            return [];
           },
         };
       } else {
