@@ -46,4 +46,3 @@ node_modules
 
 coverage
 .nyc_output
-package-lock.json
