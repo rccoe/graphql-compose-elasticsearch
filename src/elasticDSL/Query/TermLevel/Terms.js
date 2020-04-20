@@ -19,7 +19,20 @@ export function getTermsITC<TContext>(
   `
   );
 
-  const fields = getAllAsFieldConfigMap(opts, '[JSON]');
+  const subName = getTypeName('QueryTermsSettings', opts);
+  const fields = getAllAsFieldConfigMap(
+    opts,
+    opts.getOrCreateITC(subName, () => ({
+      name: subName,
+      fields: {
+        id: 'String!',
+        path: 'String!',
+        index: 'String!'
+      },
+    }))
+  );
+
+  fields["_name"] = 'String';
 
   if (typeof fields === 'object') {
     return opts.getOrCreateITC(name, () => ({

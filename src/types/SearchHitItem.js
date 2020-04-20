@@ -41,6 +41,8 @@ export function getSearchHitItemTC<TContext>(
       // return sort values for search_after
       sort: 'JSON',
 
+      matched_queries: '[String]',
+
       fields: {
         type: 'JSON',
         description: 'Returns result from `args.opts.body.script_fields`',

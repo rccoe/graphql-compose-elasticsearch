@@ -31,6 +31,7 @@ export function getTermITC<TContext>(
         fuzziness: 'Int',
         prefix_length: 'Int',
         max_expansions: 'Int',
+        _name: 'String'
       },
     }))
   );
