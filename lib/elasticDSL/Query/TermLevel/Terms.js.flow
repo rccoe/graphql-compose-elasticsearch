@@ -27,7 +27,8 @@ export function getTermsITC<TContext>(
       fields: {
         id: 'String!',
         path: 'String!',
-        index: 'String!'
+        index: 'String!',
+        boost: 'Float'
       },
     }))
   );
