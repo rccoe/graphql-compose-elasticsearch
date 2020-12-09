@@ -38,6 +38,7 @@ export type FieldsMapByElasticType = {
 export const typeMap = {
   text: 'String',
   keyword: 'String',
+  search_as_you_type: 'String',
   string: 'String',
   byte: 'Int', // 8-bit integer
   short: 'Int', // 16-bit integer
