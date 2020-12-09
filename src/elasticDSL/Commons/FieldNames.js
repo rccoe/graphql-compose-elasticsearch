@@ -12,19 +12,19 @@ import { getTypeName, type CommonOpts, desc } from '../../utils';
 export type ElasticDataType = string;
 
 export function getStringFields(opts: CommonOpts<any>) {
-  return getFieldNamesType(opts, ['text', 'keyword', 'string'], 'String');
+  return getFieldNamesType(opts, ['text', 'keyword', 'string', 'search_as_you_type'], 'String');
 }
 
 export function getStringAsFieldConfigMap(opts: CommonOpts<any>, fc: mixed) {
-  return getFieldConfigMap(opts, ['text', 'keyword', 'string'], fc);
+  return getFieldConfigMap(opts, ['text', 'keyword', 'string', 'search_as_you_type'], fc);
 }
 
 export function getAnalyzedFields(opts: CommonOpts<any>) {
-  return getFieldNamesType(opts, ['text', 'string'], 'String', true);
+  return getFieldNamesType(opts, ['text', 'string', 'search_as_you_type'], 'String', true);
 }
 
 export function getAnalyzedAsFieldConfigMap(opts: CommonOpts<any>, fc: mixed) {
-  return getFieldConfigMap(opts, ['text', 'string'], fc, true);
+  return getFieldConfigMap(opts, ['text', 'string', 'search_as_you_type'], fc, true);
 }
 
 export function getKeywordAsFieldConfigMap(opts: CommonOpts<any>, fc: mixed) {
